@@ -1,0 +1,534 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Erica+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik+Glitch&family=Sigmar+One&family=Titan+One&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+*{
+    box-sizing: border-box;
+ 
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    opacity: 50%;
+}
+
+.nav-wrapper{
+    width: 100%;
+    height: 80px;
+}
+.nav-section{
+    width: 100%;    
+    height: 80px;
+    display: flex;
+    background-color: rgb(66, 60, 57);
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu {
+    color:rgb(255, 255, 255) ;
+    font-size:large ;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    column-gap: 50px;
+    
+    
+}
+
+
+.header-wrapper {
+    width: 100%;
+    
+}
+
+.header-section {
+    width: 100%;
+    aspect-ratio: 16 / 9;          /* ล็อกสัดส่วน */
+    max-height: 70vh;              /* ไม่สูงเกินจอ */
+    background-color: rgb(238, 206, 179);
+    background-image: url(../Asset/Indexpage/Fashion-headers.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.flex-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.05rem;
+    
+     font-family: "Lora", serif;
+     font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.flex-item-indexpage{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+;
+}
+
+.item-1-indexpage{
+    
+    width: 580px;
+    height: 700px;
+}
+
+.item-1-indexpage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  opacity: 80%;  
+}
+
+
+
+
+
+.item-2-indexpage{
+    width: 580px;
+    height: 700px;
+}
+
+.item-2-indexpage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 80%;    
+}
+
+
+
+
+
+
+.item-3-indexpage{
+    width: 580px;
+    height: 700px;
+}
+
+.item-3-indexpage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 80%;    
+}
+
+
+.button-indexpage{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.button-indexpage button{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    width: 240px;
+    height: 40px;
+    color: aliceblue;
+    background-color: rgb(66, 60, 57);
+    text-align: center;
+}
+.index-footer{
+    margin-top: auto;
+    width: 100%;
+    height: auto;  
+    display: flex; 
+    background-color: rgb(66, 60, 57);
+    color: aliceblue;
+    padding: 40px;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    justify-content: space-around;
+   
+
+}
+
+.underline-list{
+    text-decoration: underline;
+}
+
+.icon-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.logo-banding{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+}
+
+
+.logo-banding img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+     border-radius: 60px;
+}
+
+
+.content-wrapper-sale{
+    width: 100%;
+    height: auto;
+    padding: 60px;
+}
+
+.insidecontent{
+    color: black;
+    
+}
+.font-span{
+    color: black;  
+    
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+
+.flex-sale-concept{
+    display: flex;
+    column-gap: 200PX;
+}
+
+.concept-1{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+.underline-list-category-activate{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.underline-list-category:hover{
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+.underline {
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+}
+.concept-2{
+    flex: 1; /* ให้ content ส่วนนี้ขยายเต็มพื้นที่ที่เหลือ */
+    height: auto;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+.basicfont{
+     font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 0px;
+}
+
+.grid-itemshop{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    margin-top: 2rem; /* เพิ่มระยะห่างจากข้อความด้านบน */
+    column-gap: 20px;
+    row-gap: 20px; /* เพิ่มระยะห่างระหว่างแถว */
+}
+
+/* รวมสไตล์ของ item ทุกชิ้น และทำให้เป็น responsive */
+.item1-shop, .item2-shop, .item3-shop, .item4-shop,
+.item5-shop, .item6-shop, .item7-shop, .item8-shop,
+.item9-shop, .item10-shop, .item11-shop, .item12-shop , .item13-shop , .item14-shop , .item15-shop , .item16-shop {
+    width: 100%; /* ให้ความกว้างเต็มพื้นที่ของ grid cell */
+}
+
+.item1-shop img, .item2-shop img, .item3-shop img, .item4-shop img , .item4-shop img, .item5-shop img, .item6-shop img, .item7-shop img, .item8-shop img, .item9-shop img, .item10-shop img, .item11-shop img, .item12-shop img, .item13-shop img, .item14-shop img , .item15-shop img , .item16-shop img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.sale-font{
+    opacity: 50%;  text-decoration: line-through;
+}
+
+.sale-font2{
+    opacity: 50%;  
+    margin-left: 20px;
+    text-decoration: none; 
+
+}
+
+
+.price-range{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* RANGE */
+input[type="range"] {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.price-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* COLORS */
+.colors {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.dot.active {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+.btn-shopbest:hover{
+    background-color: #ddd;
+    color: #000;
+    cursor: pointer;
+
+}
+
+
+
+.stores-wrapper{
+    padding-left: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+}
+.flex-stores{
+    padding-left: 50px;
+    width: 100%;
+    height: auto;
+    display: flex; 
+    column-gap: 200px;
+}
+.colums-1{
+    width: 300px;
+    height: 200px;
+}
+.colums-2{
+    width: 300px;
+    height: 200px;
+
+}
+
+
+/* */
+.item-1-indexpage img:hover{
+    transition: 2s;
+    opacity: 100%;
+    scale: 1.1;
+    cursor: pointer;
+}
+.item-2-indexpage img:hover{
+    transition: 2s;
+    opacity: 100%;
+    scale: 1.1;
+    cursor: pointer;
+}
+.item-3-indexpage img:hover{
+    transition: 2s;
+    opacity: 100%;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.item1-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.item2-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.item3-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.item4-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.item5-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.item6-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.item7-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.item8-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.item9-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.item10-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.item11-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.item12-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.item13-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.item14-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.item15-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.item16-shop img:hover{
+    transition: 2s;
+    scale: 1.1;
+    cursor: pointer;
+}
+/*  */
+.sale-status{
+    margin-left: 50px;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+
+
+
+.bestseller-status{
+    margin-left: 50px;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(81, 255, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+
+
+/* สี */
+.beige { background: #cfc7b8; }
+.black { background: #000; }
+.brown { background: #6b4b2a; }
+.blue  { background: #9dd1e8; }
+.yellow{ background: #f5f3b2; }
+.gray  { background: #ddd; }
+
+
+
