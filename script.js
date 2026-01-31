@@ -11,6 +11,23 @@ const qtyitem  =  document.querySelector('#qty-itm');
 
 
 
+const dropdown = document.querySelector('.dropdown');
+const input = dropdown.querySelector('input');
+const items = dropdown.querySelectorAll('li');
+
+input.onclick = () => dropdown.classList.toggle('open');
+
+items.forEach(item => {
+  item.onclick = () => {
+    input.value = item.innerText;
+    dropdown.classList.remove('open');
+  };
+});
+
+
+
+
+
 // ตรวจสอบว่ามีปุ่มอยู่จริงไหม (ป้องกัน error ในหน้าอื่นที่ไม่มีปุ่มนี้)
 if (btnSubscribe) {
     btnSubscribe.addEventListener('click', function() {
@@ -41,3 +58,5 @@ if (plusbtn && minusbtn){
     }
   })
 }
+
+
