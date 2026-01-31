@@ -520,6 +520,144 @@ input[type="range"] {
     font-weight: 500;
 }
 
+.content-product-item{
+    width: 100%;
+    height: auto;
+    padding: 60px;
+    padding-left: 250px;
+    padding-right: 250px;
+
+}
+.flex-end{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.flex-content-product-item{
+     display: flex;
+    justify-content: space-between;
+    
+    
+
+}
+.detailproduct-concept{
+    width: 100%;
+    height: auto;
+    padding: 60px;
+    padding-left: 250px;
+    padding-right: 250px;
+    
+}
+
+.content-product-item1{
+   width: 500px;
+   height: 500px;
+}
+
+
+
+.content-product-item1 img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: zoom-in;
+
+
+}
+.content-product-item2{
+    padding-left: 500px;
+    flex: 1;
+}
+.dropdown {
+  position: relative;
+  
+}
+
+.dropdown input {
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.qty-itm input{
+    
+    width: 200px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+.dropdown.open .list {
+  display: block;
+}
+
+.list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.list li:hover {
+  background: #eee;
+}
+.minus-btn{
+    width: 140px; height: 50px; background-color: #ffffff;  cursor: pointer; font-size: large;
+}
+.push-btn{
+     width: 140px; height: 50px; background-color: #ffffff; cursor: pointer; font-size: large;
+}
+.btn-add-cart{
+    width: 180px; height: 50px; background-color: #ffffff;  cursor: pointer; font-size: large;
+}
+.btn-heart{
+    width: 130px; height: 50px; background-color: #ffffff;  cursor: pointer; font-size: large ; margin-left: 20px;
+}
+
+
+
+
+
+
+.btn-add-cart:hover{
+    width: 140px; height: 50px; background-color: #ffffff;  cursor: pointer; font-size: large;
+    box-shadow: 2px 4px 3px black;
+}
+.btn-heart:hover{
+    width: 100px; height: 50px; background-color: #ffffff;  cursor: pointer; font-size: large ; margin-left: 20px;
+    box-shadow: 2px 4px 3px black;
+}
+.btn-buy{
+    width: 500px;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(66, 60, 57);
+    color: #ffffff;
+    font-size: large;
+}
+
+.btn-buy:hover{
+    width: 500px;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(66, 60, 57);
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
 
 
 /* สี */
@@ -531,4 +669,14 @@ input[type="range"] {
 .gray  { background: #ddd; }
 
 
-
+ @media screen and (max-width: 576px) {
+    .content-product-item {
+        padding: 15px; /* ลด padding เพื่อให้มีพื้นที่เหลือ */
+    }
+    
+    .content-product-item .font-span {
+        white-space: nowrap; /* บังคับไม่ให้ตัดบรรทัด */
+        font-size: 10px; /* ปรับขนาดตัวอักษรให้พอดี */
+        letter-spacing: 0px; /* ลดระยะห่างตัวอักษร */
+    }
+}

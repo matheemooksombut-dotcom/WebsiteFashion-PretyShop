@@ -4,27 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <title>PRETTY GAL</title>
 </head>
 <body>
-     <div class="nav-wrapper">
+    <div class="nav-wrapper">
         <nav class="nav-section">
             <ul class="menu">
-                <a href="index.html"><li>Shop</li></a>
-                <a href="sale.html"><li>Sale</li></a>
-                <a href="stores.html"><li>Store</li></a>
+                <a href="../index.html"><li>Shop</li></a>
+                <a href="../sale.html"><li>Sale</li></a>
+                <a href="../stores.html"><li>Store</li></a>
             </ul>
                 <h2 style="color: aliceblue; text-align: center; align-items: center;" >PRETTY GAL</h2>
             <div class="cart">
                 <i class="fa-solid fa-cart-plus fa-lg" style="color: #ffffff;"></i>
             </div>
 
-            <div class="logo-banding">
-                <img src="./Asset/Indexpage/Logo-removebg-preview.png" alt="">
+             <div>
+                <i class="fa-solid fa-circle-user" style="color: #ffffff; font-size: larger; "></i>
             </div>
         </nav>
          
     </div>
+
+    <div class="content-product-item">
+        <div class="insidecontent">
+            <div class="flex-end">
+               <div class="1"> <a href="../index.html"><span class="font-span">Home</span> </a> <a href="../sale.html"><span class="font-span"><b> > All Products</b> </span></a><span class="font-span"> > Product-4</span></div>
+            <div class="2"> <span class="font-span"> <a style="color: #000;" href="product-3.html">< Prev |</a></span><span class="font-span"><a style="color: #000;" href="product-5.html"> Next ></a></span></div>
+            </div>
+        </div>
+       
+    </div>
+
+
+    <div class="detailproduct-concept">
+        <div class="flex-content-product-item">
+            <div class="content-product-item1">
+                <img src="../Asset/Shoppage/Item4.jpg" alt="">
+               <p>I'm a product description. I’m a great place to include more information about your product. Buyers like to know what they’re getting before they purchase.</p>
+            </div>
+
+
+            <div class="content-product-item2">
+              <b><p>Product-4</p></b>
+              
+              <p style="opacity: 50%;  ">SKU: 0014</p>
+              
+                <b><span  style="margin-left: 20px;" >$59.00</span></b>
+                <br>
+                <p>Size*</p>
+               <div class="dropdown">
+                    <input type="text" placeholder="SELECT" readonly>
+                    <ul class="list">
+                        <li>Small</li>
+                        <li>Medium</li>
+                        <li>Large</li>
+                    </ul>
+                </div>
+                <br>
+                <p>Quantity*</p>
+                <div class="qty-itm" style="display: flex; border: 1px solid #000; width: fit-content; align-items: center;">
+                    <button class="minus-btn" style="border: none; background: transparent; cursor: pointer;">-</button>
+                    <input type="number" name="" id="" readonly style="border: none; text-align: center; width: 50px; outline: none; font-size: larger; " value="1" min="1" max="99" >
+                    <button class="push-btn" style="border: none; background: transparent; cursor: pointer;">+</button>
+                </div>
+                <br>
+                <button class="btn-add-cart">Add to cart</button><button class="btn-heart"><i class="fa-solid fa-heart"></i></button>
+                <br>
+                <br>
+                <button class="btn-buy">Buy Now</button>
+            </div>
+        </div>
+    </div>
     
 </body>
+<script src="../script.js"></script>
 </html>
