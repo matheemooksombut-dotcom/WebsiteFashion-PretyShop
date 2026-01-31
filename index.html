@@ -109,15 +109,21 @@
          <div class="footer-3">
             <h3>BE OUR FRIEND</h3>
             <p>Enter Your Email Here*</p>
-            <input type="text" style="width: 250px; height: 40px ;">
+            <input type="email" id="input-Subcribe" style="width: 250px; height: 40px ;">
             <br>
+            <p class="alert-input-Subcribe" style="display: none; color: red;">กรุณาใส่อีเมลของคุณให้ถูกต้อง !</p>
+            
+           
+            <input style="margin-top: 20px;" type="checkbox" name="" id="confrime-input-Subcribe"><span>Yes, Subscribe me to your newsletter</span>
             <br>
-            <input type="checkbox" name="" id=""><span>Yes, Subscribe me to your newsletter</span>
-            <br>
-            <br>
-            <button style="width: 250px; height: 60px ; font: 1em sans-serif ; cursor: pointer;" >Subscribe Now</button>
+            <p class="alert-checked" style="display: none; color: red;">กรุณากดเลือกการยืนยัน Confrime !</p>
+            
+          
+            <button type="button" id="btn-subscribe" style="width: 250px; height: 60px ; font: 1em sans-serif ; cursor: pointer; margin-top: 20px;" >Subscribe Now</button>
         </div>
 
     </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
