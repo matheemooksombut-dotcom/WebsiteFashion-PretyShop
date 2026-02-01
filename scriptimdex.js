@@ -22,4 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.remove('active');
     overlay.classList.remove('active');
   }
+
+  
 });
+
+
+

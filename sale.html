@@ -44,7 +44,7 @@
                 <p class="underline">BROWSE BY CATEGORY</p>
                 
                 <ul class="menu-category">
-                    <li class="underline-list-category-activate">All Product</li>
+                    <li class="underline-list-category-activate" id="show-all">All Product</li>
                     <li class="underline-list-category"><a href="/category/BestsellPromo.html" style="color: #000;">New Available </a></li>
                     <li class="underline-list-category"><a style="color: #000;" href="category/SalePromo.html">Sale</a></li>
                 </ul>
@@ -61,7 +61,7 @@
                         </div>
                         <br>
 
-                        <input style="width: 100%" type="range" min="11" max="59" value="11">
+                        <input style="width: 100%" type="range" min="11" max="59" value="11" id="range">
                         <div class="price-range">
                             <span>$</span>
                             <span>$</span>
@@ -76,12 +76,12 @@
                         <br>
 
                         <div class="colors">
-                            <span class="dot beige"></span>
-                            <span class="dot black"></span>
-                            <span class="dot brown"></span>
-                            <span class="dot blue"></span>
-                            <span class="dot yellow "></span>
-                            <span class="dot gray"></span>
+                            <span class="dot beige" data-color="beige"></span>
+                            <span class="dot black" data-color="black"></span>
+                            <span class="dot brown" data-color="brown"></span>
+                            <span class="dot blue" data-color="blue"></span>
+                            <span class="dot yellow " data-color="yellow"></span>
+                            <span class="dot gray" data-color="gray"></span>
                         </div>
                 </div>
                 </div>
@@ -94,14 +94,14 @@
 
 
             <div class="concept-2">
-                <p class="underline">All PRODUCT</p>
+                <p class="underline" id="change">All PRODUCT</p>
                 <br>
                 <span class="basicfont">This is your category description. It’s a great place to tell customers what this category is about, connect with your audience and draw attention to your products.</span>
                 <div class="grid-itemshop">
                        
                             <div class="item1-shop">
                                 <a href="/Items/product-1.html">
-                                    <img src="/Asset/Shoppage/Item1.png" alt="">
+                                    <img class="product-img" src="/Asset/Shoppage/Item1.png" data-color="black" alt="">
                                 </a>
                                 <p>product-1 <span class="sale-status">Sale</span></p>
                                 <span class="sale-font">$19.99</span>
@@ -111,42 +111,42 @@
                         
                         <div class="item2-shop">
                             <a href="/Items/product-2.html">
-                                <img src="/Asset/Shoppage/Item2/Item2.1.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item2/Item2.1.jpg" data-color="beige brown gray" alt="">
                             </a>
                             <p>product-2 <span class="bestseller-status">New 🔥</span></p>
                             <span  class="sale-font2" >$14.99</span>
                         </div>
                         <div class="item3-shop">
                             <a href="/Items/product-3.html">
-                                <img src="/Asset/Shoppage/Item3.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item3.jpg" data-color="beige" alt="">
                             </a>
                             <p>product-3</p>
                             <span  class="sale-font2" >$15.99</span>
                         </div>
                         <div class="item4-shop">
                             <a href="/Items/product-4.html">
-                                <img src="/Asset/Shoppage/Item4.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item4.jpg" data-color="brown" alt="">
                             </a>
                             <p>product-4 <span class="bestseller-status">New 🔥</span></p>
                             <span  class="sale-font2" >$59.00</span>
                         </div>
                         <div class="item5-shop">
                             <a href="/Items/product-5.html">
-                                <img src="/Asset/Shoppage/Item5/Item5.1.png" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item5/Item5.1.png" alt="">
                             </a>
                             <p>product-5</p>
                             <span  class="sale-font2" >$14.99</span>
                         </div>
                         <div class="item6-shop">
                             <a href="/Items/product-6.html">
-                                <img src="/Asset/Shoppage/Item6/Item6.1.png" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item6/Item6.1.png" data-color="brown" alt="">
                             </a>
                             <p>product-6</p>
                             <span  class="sale-font2" >$11.99</span>
                         </div>
                         <div class="item7-shop">
                             <a href="/Items/product-7.html">
-                                <img src="/Asset/Shoppage/Item7.png" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item7.png" alt="">
                             </a>
                             <p>product-7<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$19.99</span>
@@ -154,14 +154,14 @@
                         </div>
                         <div class="item8-shop">
                             <a href="/Items/product-8.html">
-                                <img src="/Asset/Shoppage/Item8.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item8.jpg" alt="">
                             </a>
                             <p>product-8 <span class="bestseller-status">New 🔥</span></p>
                             <span  class="sale-font2" >$19.99</span>
                         </div>
                         <div class="item9-shop">
                             <a href="/Items/product-9.html">
-                                <img src="/Asset/Shoppage/Item9.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item9.jpg" alt="">
                             </a>
                             <p>product-9<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$15.99</span>
@@ -169,7 +169,7 @@
                         </div>
                         <div class="item10-shop">
                             <a href="/Items/product-10.html">
-                                <img src="/Asset/Shoppage/Item10/Item10.1.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item10/Item10.1.jpg" data-color="beige brown" alt="">
                             </a>
                             <p>product-10<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$19.99</span>
@@ -177,7 +177,7 @@
                         </div>
                         <div class="item11-shop">
                             <a href="/Items/product-11.html">
-                                <img src="/Asset/Shoppage/Item11.png" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item11.png" data-color="beige" alt="">
                             </a>
                             <p>product-11<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$15.99</span>
@@ -185,7 +185,7 @@
                         </div>
                         <div class="item12-shop">
                             <a href="/Items/product-12.html">
-                                <img src="/Asset/Shoppage/Item12.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item12.jpg" data-color="beige" alt="">
                             </a>
                             <p>product-12</p></p>
                             <span  class="sale-font2" >$19.99</span>
@@ -193,7 +193,7 @@
 
                         <div class="item13-shop">
                             <a href="/Items/product-13.html">
-                                <img src="/Asset/Shoppage/Item13.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item13.jpg" alt="">
                             </a>
                             <p>product-13</p>
                             <span  class="sale-font2" >$14.99</span>
@@ -201,7 +201,7 @@
 
                         <div class="item14-shop">
                             <a href="/Items/product-14.html">
-                                <img src="/Asset/Shoppage/Item14.jpeg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item14.jpeg" alt="">
                             </a>
                             <p>product-14<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$19.99</span>
@@ -210,7 +210,7 @@
 
                         <div class="item15-shop">
                             <a href="/Items/product-15.html">
-                                <img src="/Asset/Shoppage/Item15/Item15.1.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item15/Item15.1.jpg" data-color="blue beige yellow" alt="">
                             </a>
                             <p>product-15</p>
                             <span  class="sale-font2" >$14.99</span>
@@ -219,7 +219,7 @@
 
                         <div class="item16-shop">
                             <a href="/Items/product-16.html">
-                                <img src="/Asset/Shoppage/Item16/Item16.jpg" alt="">
+                                <img class="product-img" src="/Asset/Shoppage/Item16/Item16.jpg" alt="">
                             </a>
                             <p>product-16 <span class="bestseller-status">New 🔥</span></p>
                             <span  class="sale-font2" >$14.99</span>
@@ -313,5 +313,6 @@
     
 
         <script src="scriptimdex.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>
