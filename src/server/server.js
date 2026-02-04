@@ -10,12 +10,29 @@ app.use(cors());
 
 
 
-
-
-// TestRout
+// Rout
+// Show Case
 app.get( "/" , (req , res)=>{
     res.send('hello')
 })
+
+
+// Updated 
+app.put("/" , (req , res) =>{
+
+})
+
+//  Update : ID
+app.patch("/" , (req , res) =>{
+
+})
+
+
+// Deleate
+app.delete  ("/" , (req , res) =>{
+
+})
+
 
 
 
