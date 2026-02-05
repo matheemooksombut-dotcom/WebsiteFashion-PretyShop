@@ -59,23 +59,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const products = document.querySelectorAll('.grid-itemshop > div');
   const changetext = document.querySelector('#change');
   const underlinenone  = document.querySelector('#show-all');
+  const previewImg = document.querySelector('.content-product-item1 img');
+
+
 
 
 
   dots.forEach(dot => {
     dot.addEventListener('click', () => {
-      changetext.textContent = 'Colors';
-      underlinenone.style.textDecoration = 'none';
+     if (changetext) changetext.textContent = 'Colors';
+      if (underlinenone) underlinenone.style.textDecoration = 'none';
+
 
 
       dots.forEach(d => d.classList.remove('active'));
       dot.classList.add('active');
+      const newImg = dot.dataset.img;
 
-      const selectedColor = dot.dataset.color;
+        if (previewImg && newImg) {
+          previewImg.src = newImg;
+        }
+
+
 
       products.forEach(product => {
         const img = product.querySelector('.product-img');
         const colors = img?.dataset.color;
+        
 
         if (!colors) {
           product.style.display = 'none';
