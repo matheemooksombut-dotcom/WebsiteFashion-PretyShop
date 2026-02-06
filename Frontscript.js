@@ -15,7 +15,20 @@ const submitData = async () => {
     let UsernameDom = document.querySelector('input[name="Username"]')
     let PasswordDom = document.querySelector('input[name="Password"]')
     let ConfirmPasswordDom = document.querySelector('input[name="ConfirmPassword"]')
-        const strongPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+    const strongPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$/;
+    const thaiPattern = /[\u0E00-\u0E7F]/;
+
+    if (thaiPattern.test(PasswordDom.value)) {
+        Swal.fire({
+            title: 'Invalid Input',
+            text: 'Password cannot contain Thai characters',
+            icon: 'warning'
+        });
+        return;
+    }
+
+
+
     if (PasswordDom.value !== ConfirmPasswordDom.value) {
             Swal.fire({
             title: 'Password Error',
@@ -27,7 +40,7 @@ const submitData = async () => {
     if (!strongPassword.test(PasswordDom.value)) {
         Swal.fire({
         title: 'Password Error',
-        text: ' Password must contain letters, numbers and at least 6 characters',
+        text: ' Password must contain letters, numbers and at least 6 characters and Special characters',
         icon: 'warning'
     });
     return;
