@@ -15,14 +15,24 @@ const submitData = async () => {
     let UsernameDom = document.querySelector('input[name="Username"]')
     let PasswordDom = document.querySelector('input[name="Password"]')
     let ConfirmPasswordDom = document.querySelector('input[name="ConfirmPassword"]')
-    const strongPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-        if (PasswordDom.value !== ConfirmPasswordDom.value) {
-        alert("Password not match")
-        if (!strongPassword.test(PasswordDom.value)) {
-        alert("Password must contain letters, numbers and at least 6 characters");
+        const strongPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+    if (PasswordDom.value !== ConfirmPasswordDom.value) {
+            Swal.fire({
+            title: 'Password Error',
+            text: 'Password not match',
+            icon: 'warning'
+        });
         return;
+    }  
+    if (!strongPassword.test(PasswordDom.value)) {
+        Swal.fire({
+        title: 'Password Error',
+        text: ' Password must contain letters, numbers and at least 6 characters',
+        icon: 'warning'
+    });
+    return;
     }
-
+    
 
     try {
 
@@ -39,12 +49,23 @@ const submitData = async () => {
             'http://localhost:3000/users',
             userData
         )
-          alert("Register Success 🎉");
+            Swal.fire({
+                title: 'Register Success',
+                icon: 'success'
+            }).then(() => {
+                window.location.href = "index.html";
+            });
 
 
         console.log(response.data)
 
     } catch (err) {
         console.error(err)
+        Swal.fire({
+        title: 'Error!',
+        text: 'Register Failed',
+        icon: 'error'
+    });
     }
 }
+
