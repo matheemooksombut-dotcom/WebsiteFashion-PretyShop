@@ -1,15 +1,25 @@
-const form = document.querySelector("form");
+document.addEventListener("DOMContentLoaded", () => {
+    const registerForm = document.querySelector("#registerForm");
+    const loginForm = document.querySelector("#loginForm");
 
-form.addEventListener("submit", async (e) => {
-    e.preventDefault(); 
+    if (registerForm) {
+        registerForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            await submitRegister();
+        });
+    }
 
-    await submitData();
+    if (loginForm) {
+        loginForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            await submitLogin();
+        });
+    }
 });
 
 
-
-
-const submitData = async () => {
+// Register Section
+const submitRegister = async () => {
     let FullnameDom = document.querySelector('input[name="Fullname"]')
     let EmailDom = document.querySelector('input[name="Email"]')
     let UsernameDom = document.querySelector('input[name="Username"]')
@@ -82,3 +92,49 @@ const submitData = async () => {
     }
 }
 
+// Login Section
+const submitLogin = async () => {  
+    let Username  = document.querySelector('input[name="Username"]')
+    let Password  = document.querySelector('input[name="Password"]')
+
+    if(Username.value === "" || Password.value === ""){
+           Swal.fire({
+            title: 'Please Enter yourUsername & Password',
+            text: 'Try Again',
+            icon: 'warning'
+        });
+        return;
+    }
+
+    try {
+        await axios.post('http://localhost:3000/login',{
+            Username: Username.value,
+            Password: Password.value
+        })
+
+            Swal.fire({
+            title: 'Login Success',
+            icon: 'success'
+        }).then(()=>{
+            window.location.href = "../UserSection/index.html";
+        })
+        
+
+        
+
+
+    } catch (err) {
+        console.error("Login Error:", err);
+
+         let message = err.response?.data?.message || "Login Failed";
+        Swal.fire({
+            title: 'Error!',
+            text: message,
+            icon: 'error'
+        });
+    }
+
+
+    
+
+} 

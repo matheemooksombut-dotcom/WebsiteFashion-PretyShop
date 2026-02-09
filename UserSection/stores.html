@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./style/style.css">
+      <link rel="stylesheet" href="../style/style.css">
       <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -23,7 +23,7 @@
                 </div>
 
                 <div>
-                   <i class="fa-solid fa-circle-user user-icon" style="color: #ffffff; font-size: larger; cursor: pointer; "></i>
+                   <i class="fa-solid fa-circle-user user-logout" style="color: #00ff00; font-size: larger; cursor: pointer; "></i>
                 </div>
             </nav>
          
@@ -142,38 +142,23 @@
 
 
     <!-- OVERLAY -->
-              <!-- OVERLAY -->
+              
+   <!-- OVERLAY -->
+             <!-- OVERLAY -->
                 <div class="overlay"></div>
 
-                <!-- LOGIN UI -->
-                <div class="login-modal">
-                    <form class="loginForm">
-                        <span class="close" style="cursor: pointer; display: flex; justify-content: end;">✕</span>
-                        <h2>Login</h2>
-                        <input name="Username" type="text" placeholder="Username">
-                        <br>
-                        <br>
-                        <input name="Password" type="password" placeholder="Password">
-                        <br>
-                        <br>
-                        <button type="submit">Sign in</button>
-                        <p>OR</p>
-                        <button style="background-color: rgb(59, 89, 152); "> <i class="fa-brands fa-facebook" style="margin-right: 20px;"></i>Sign With Facebook</button>
-                        <br>
-                        <br>
-                        <button style="background-color: rgb(66, 133, 244);"><i class="fa-brands fa-google" style="margin-right: 20px;"></i>Sign With Google</button>
-                        <a href="Register.html"><p style="color: black;">Don't have an account? <span class="fontregis">Register Now</span></p></a>
-                    </form>
+                <!-- LOGOUT UI -->
+                <div class="logout-modal">
+                    <span class="close" style="cursor: pointer; display: flex; justify-content: end;">✕</span>
+                    <h2>Logout</h2>
+                    <a href="index.html"><button style="background-color: rgba(244, 93, 66, 0.836);"><i class="fa-solid fa-right-from-bracket" style="margin-right: 20px;"></i>LOGOUT</button></a>
                 </div>
 
 
            
 
         
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="Frontscript.js"></script>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     
     
 </body>

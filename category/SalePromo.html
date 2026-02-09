@@ -22,8 +22,8 @@
                 <i class="fa-solid fa-cart-plus fa-lg" style="color: #ffffff;"></i>
             </div>
 
-            <div class="logo-banding">
-                <img src="../Asset/Indexpage/Logo-removebg-preview.png" alt="">
+            <div>
+                <i class="fa-solid fa-circle-user user-icon" style="color: #ffffff; font-size: larger; cursor: pointer; "></i>
             </div>
         </nav>
          
@@ -99,7 +99,9 @@
                 <span class="basicfont">This is your category description. It’s a great place to tell customers what this category is about, connect with your audience and draw attention to your products.</span>
                 <div class="grid-itemshop">
                         <div class="item1-shop">
-                            <img src="../Asset/Shoppage/Item1.png" alt="">
+                            <a href=".././Items/product-1.html">
+                                <img src="../Asset/Shoppage/Item1.png" alt="">
+                            </a>
                             <p>product-1 <span class="sale-status">Sale</span></p>
                             <span class="sale-font">$19.99</span>
                             <span  class="sale-font2" >$14.99</span>
@@ -107,26 +109,34 @@
                         
                        
                         <div class="item7-shop">
-                            <img src="../Asset/Shoppage/Item7.png" alt="">
+                            <a href=".././Items/product-7.html">
+                                <img src="../Asset/Shoppage/Item7.png" alt="">
+                            </a>
                             <p>product-7<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$19.99</span>
                             <span  class="sale-font2" >$14.99</span>
                         </div>
                        
                         <div class="item9-shop">
-                            <img src="../Asset/Shoppage/Item9.jpg" alt="">
+                            <a href=".././Items/product-9.html">
+                                <img src="../Asset/Shoppage/Item9.jpg" alt="">
+                            </a>
                             <p>product-9<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$15.99</span>
                             <span  class="sale-font2" >$11.99</span>
                         </div>
                         <div class="item10-shop">
-                            <img src="../Asset/Shoppage/Item10/Item10.1.jpg" alt="">
+                            <a href=".././Items/product-10.html">
+                                <img src="../Asset/Shoppage/Item10/Item10.1.jpg" alt="">
+                            </a>
                             <p>product-10<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$19.99</span>
                             <span  class="sale-font2" >$14.99</span>
                         </div>
                         <div class="item11-shop">
-                            <img src="../Asset/Shoppage/Item11.png" alt="">
+                            <a href=".././Items/product-11.html">
+                                <img src="../Asset/Shoppage/Item11.png" alt="">
+                            </a>
                             <p>product-11<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$15.99</span>
                             <span  class="sale-font2" >$11.99</span>
@@ -134,7 +144,9 @@
                         
                        
                         <div class="item14-shop">
-                            <img src="../Asset/Shoppage/Item14.jpeg" alt="">
+                            <a href=".././Items/product-14.html">
+                                <img src="../Asset/Shoppage/Item14.jpeg" alt="">
+                            </a>
                             <p>product-14<span class="sale-status">Sale</span></p></p>
                             <span class="sale-font">$19.99</span>
                             <span  class="sale-font2" >$14.99</span>
@@ -210,5 +222,34 @@
 
 
 
+     <div class="overlay"></div>
+
+                <!-- LOGIN UI -->
+                <div class="login-modal">
+                    <form id="loginForm">
+                        <span class="close" style="cursor: pointer; display: flex; justify-content: end;">✕</span>
+                        <h2>Login</h2>
+                        <input name="Username"   type="text" placeholder="Username">
+                        <br>
+                        <br>
+                        <input name="Password" type="password" placeholder="Password">
+                        <br>
+                        <br>
+                        <button type="submit">Sign in</button>
+                        <p>OR</p>
+                        <button style="background-color: rgb(59, 89, 152); "> <i class="fa-brands fa-facebook" style="margin-right: 20px;"></i>Sign With Facebook</button>
+                        <br>
+                        <br>
+                        <button style="background-color: rgb(66, 133, 244);"><i class="fa-brands fa-google" style="margin-right: 20px;"></i>Sign With Google</button>
+                        <a href="../Register.html"><p style="color: black;">Don't have an account? <span class="fontregis">Register Now</span></p></a>
+                    </form>
+                </div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../Frontscript.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

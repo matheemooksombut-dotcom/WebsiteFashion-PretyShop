@@ -22,7 +22,7 @@ const pool = mysql.createPool({
 
 // Rout
 
-app.get( "/users" , async(req , res)=>{
+app.get( "/user" , async(req , res)=>{
   try {
         const [rows] = await pool.query('SELECT * FROM users');
         res.json(rows);
@@ -34,7 +34,7 @@ app.get( "/users" , async(req , res)=>{
 })
 
 
-// Updated 
+// Register
 app.post("/users" , async(req , res) =>{
     try {
 
@@ -58,17 +58,39 @@ app.post("/users" , async(req , res) =>{
 
 })
 
-//  Update : ID
-app.patch("/" , (req , res) =>{
 
-})
+// Login
+app.post('/login', async (req, res) => {
 
+    try {
 
-// Deleate
-app.delete  ("/" , (req , res) =>{
+        const { Username, Password } = req.body;
 
-})
+        const [users] = await pool.query(
+            'SELECT * FROM users WHERE Username = ?',
+            [Username]
+        );
 
+        if (users.length === 0) {
+            return res.status(401).json({ message: 'User not found' });
+        }
+
+        const user = users[0];
+
+        if (user.Password !== Password) {
+            return res.status(401).json({ message: 'Wrong password' });
+        }
+
+        res.json({ message: 'Login success' });
+
+    } catch (err) {
+
+        console.log(err);
+
+        res.status(500).json({ message: 'Server error' });
+    }
+
+});
 
 
 
