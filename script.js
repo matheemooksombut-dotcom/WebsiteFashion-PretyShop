@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let selectedColor = null; 
+  let selectedImg = null;
+  let selectedSize = null;
+
+
 
   /* ================= Dropdown Size ================= */
   const dropdown = document.querySelector('.dropdown');
@@ -11,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     items.forEach(item => {
       item.onclick = () => {
         input.value = item.innerText;
+        selectedSize = item.innerText;
         dropdown.classList.remove('open');
       };
     });
@@ -66,59 +72,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const selectedColor = dot.dataset.color;
-      if (changetext) changetext.textContent = 'Colors';
-      if (underlinenone) underlinenone.style.textDecoration = 'none';
+  dot.addEventListener('click', () => {
 
+    selectedColor = dot.dataset.color;
+    selectedImg = dot.dataset.img;
 
- 
-      dots.forEach(d => d.classList.remove('active'));
-      dot.classList.add('active');
-      const newImg = dot.dataset.img;
+    if (changetext) changetext.textContent = 'Colors';
+    if (underlinenone) underlinenone.style.textDecoration = 'none';
 
-        if (previewImg && newImg) {
-          previewImg.src = newImg;
-        }
+    dots.forEach(d => d.classList.remove('active'));
+    dot.classList.add('active');
 
+    if (previewImg && selectedImg) {
+      previewImg.src = selectedImg;
+    }
 
+    // filter product
+    products.forEach(product => {
+      const img = product.querySelector('.product-img');
+      const colors = img?.dataset.color;
 
-      products.forEach(product => {
-        const img = product.querySelector('.product-img');
-        const colors = img?.dataset.color;
-        
+      if (!colors) {
+        product.style.display = 'none';
+        return;
+      }
 
-        if (!colors) {
-          product.style.display = 'none';
-          return;
-        }
-
-        product.style.display = colors.split(' ').includes(selectedColor)
+      product.style.display =
+        colors.split(' ').includes(selectedColor)
           ? 'block'
           : 'none';
+    });
+
+  });
+});
+
+    const showAllBtn = document.querySelector('#show-all');
+
+  if (showAllBtn) {
+    showAllBtn.addEventListener('click', () => {
+
+      // เอา active ออกจาก dot ทุกอัน
+      dots.forEach(d => d.classList.remove('active'));
+
+      // แสดง product ทั้งหมด
+      products.forEach(product => {
+        product.style.display = 'block';
       });
-      
+      changetext.textContent = 'All Products';
+      underlinenone.style.textDecoration = 'underline';
+
     });
-  });
-  const showAllBtn = document.querySelector('#show-all');
-
-if (showAllBtn) {
-  showAllBtn.addEventListener('click', () => {
-
-    // เอา active ออกจาก dot ทุกอัน
-    dots.forEach(d => d.classList.remove('active'));
-
-    // แสดง product ทั้งหมด
-    products.forEach(product => {
-      product.style.display = 'block';
-    });
-    changetext.textContent = 'All Products';
-    underlinenone.style.textDecoration = 'underline';
-
-  });
-}
+  }
 
   // ===== LOGIN =====
+  const cartIcon = document.querySelector('.cart-icon');
   const userIcon = document.querySelector('.user-icon');
   const loginModal = document.querySelector('.login-modal');
   const overlay = document.querySelector('.overlay');
@@ -137,7 +144,7 @@ if (showAllBtn) {
     loginModal?.classList.remove('active');
     overlay?.classList.remove('active');
   }
-
+  cartIcon?.addEventListener('click', openLoginModal);
   userIcon?.addEventListener('click', openLoginModal);
   btnbuy?.addEventListener('click', openLoginModal);
   btnaddcart?.addEventListener('click', openLoginModal);
@@ -171,6 +178,154 @@ if (showAllBtn) {
     closeLogoutModal();
   });
 
+
+    // check color
+    const colorDots = document.querySelectorAll('.dot');
+    const hasColor = colorDots.length > 0;
+
+
+    // check size
+    const sizeDropdown = document.querySelector(".dropdown");
+    const hasSize = sizeDropdown !== null;
+
+
+
+    // ADD ITEM TO CART
+
+
+  const additems = document.getElementById("addtocart");
+
+  if(additems){
+
+      additems.addEventListener("click", () => {
+
+          const qtyInput = document.querySelector("#qty-itm");
+
+          const product = {
+              name: additems.dataset.name,
+              price: Number(additems.dataset.price),
+              img: selectedImg || additems.dataset.img,
+              qty: Number(qtyInput ? qtyInput.value : 1) ,
+              color: hasColor ? selectedColor : null,
+              size: hasSize ? selectedSize : null
+          };
+
+          //  กันข้อมูลไม่ครบ
+         if(!product.name || !product.price || !product.img){
+              alert("Data invalid");
+              return;
+          }
+
+          if(hasColor && !product.color){
+              alert("Please select color");
+              return;
+          }
+
+          if(hasSize && !product.size){
+              alert("Please select size");
+              return;
+          }
+
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+          //  รวมสินค้าซ้ำ
+          const existingItem = cart.find(item => item.name === product.name &&item.color === product.color &&item.size === product.size);
+
+          if(existingItem){
+              existingItem.qty += product.qty;
+          }else{
+              cart.push(product);
+          }
+
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          window.location.href = "/UserSection/cart.html";
+      });
+
+  }
+
+  // SHOW CART (หน้า cart.html)
+  const showcart = document.querySelector(".show-item-cart");
+
+  if(showcart){
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      //  ลบข้อมูลขยะออก
+      cart = cart.filter(item => item.name && item.price && item.img);
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      console.log("CART DATA:", cart);
+
+      showcart.innerHTML = ""; // กันซ้อน
+
+      cart.forEach(item => {
+
+          const div = document.createElement("div");
+          
+
+          div.innerHTML = `
+              <img src="${item.img}" width="200" style="border-radius:20px;">
+              <h3>${item.name}</h3>
+              ${item.color ? `<p>Color : ${item.color}</p>` : ""}
+              ${item.size ? `<p>Size : ${item.size}</p>` : ""}
+              <p>ราคา  : ${item.price.toFixed(2)}</p>
+              <p>จำนวน : ${item.qty}</p>
+              <hr>
+          `;
+
+          showcart.appendChild(div);
+
+      });
+
+  }
+
+
+
+
+
+ 
+
+
+// Addsize
+
+document.querySelectorAll(".list li").forEach(item => {
+    item.addEventListener("click", () => {
+
+        const input = document.querySelector(".dropdown input");
+        input.value = item.textContent;
+
+        selectedSize = item.textContent;
+    });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+ 
+
+
+
+});
 

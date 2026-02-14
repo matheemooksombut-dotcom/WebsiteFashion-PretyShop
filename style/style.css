@@ -641,6 +641,9 @@ input[type="range"]::-webkit-slider-thumb {
 .btn-add-cart{
     width: 180px; height: 50px; background-color: #ffffff;  cursor: pointer; font-size: large;
 }
+.btn-add-cart2{
+    width: 180px; height: 50px; background-color: #ffffff;  cursor: pointer; font-size: large;
+}
 .btn-heart{
     width: 130px; height: 50px; background-color: #ffffff;  cursor: pointer; font-size: large ; margin-left: 20px;
 }
@@ -820,6 +823,10 @@ input[type="range"]::-webkit-slider-thumb {
   pointer-events: auto;
 }
 
+.show-item-cart{
+    margin-top: 40px;
+    padding: 60px;
+}
 
 
 /* สี */
