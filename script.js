@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h3>${item.name}</h3>
               ${item.color ? `<p>Color : ${item.color}</p>` : ""}
               ${item.size ? `<p>Size : ${item.size}</p>` : ""}
-              <p>ราคา  : ${item.price.toFixed(2)}</p>
+              <p>ราคา-ต่อชิ้น  : ${item.price.toFixed(2)}</p>
               <p>จำนวน : ${item.qty}</p>
               <hr>
           `;
