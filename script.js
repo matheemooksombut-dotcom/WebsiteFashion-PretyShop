@@ -266,13 +266,22 @@ document.addEventListener('DOMContentLoaded', () => {
           
 
           div.innerHTML = `
-              <img src="${item.img}" width="200" style="border-radius:20px;">
-              <h3>${item.name}</h3>
-              ${item.color ? `<p>Color : ${item.color}</p>` : ""}
-              ${item.size ? `<p>Size : ${item.size}</p>` : ""}
-              <p>ราคา-ต่อชิ้น  : ${item.price.toFixed(2)}</p>
-              <p>จำนวน : ${item.qty}</p>
-              <hr>
+             
+              <center>
+                <img src="${item.img}" width="200" style="border-radius:20px;">
+                <h3>${item.name}</h3>
+                ${item.color ? `<p>Color : ${item.color}</p>` : ""}
+                ${item.size ? `<p>Size : ${item.size}</p>` : ""}
+                <p>ราคา-ต่อชิ้น  : ${item.price.toFixed(2)}</p>
+                <p>จำนวน : ${item.qty}</p>
+                <br>
+                <p>ช่องทางการชำระเงิน</p>
+                <br>
+                <center> <div class="buyiconstyle"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-paypal"></i><i class="fa-brands fa-cc-amazon-pay"></i></div> </center>
+                <br>
+                <hr>
+                <br>
+              </center>
           `;
 
           showcart.appendChild(div);

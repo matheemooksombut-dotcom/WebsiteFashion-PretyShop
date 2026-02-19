@@ -681,7 +681,7 @@ input[type="range"]::-webkit-slider-thumb {
     text-decoration: underline;
 }
 
-/*  */
+
 
 /* overlay */
 .overlay {
@@ -690,8 +690,7 @@ input[type="range"]::-webkit-slider-thumb {
   background: rgba(0,0,0,.4);
   backdrop-filter: blur(6px);
   opacity: 0;
-  pointer-events: none;
-  transition: .3s;
+  pointer-events: none;  
   z-index: 999;
 }
 
@@ -822,12 +821,20 @@ input[type="range"]::-webkit-slider-thumb {
   transform: scale(1) translateY(0);
   pointer-events: auto;
 }
-
 .show-item-cart{
-    margin-top: 40px;
+    
     padding: 60px;
+    background-color: #000;
+    color: white;
+    position: relative;
 }
-
+.buyiconstyle{
+   font-size: xx-large;
+   display:flex;
+   justify-content: center;
+   text-align: center;
+   column-gap: 100px;
+}
 
 /* สี */
 .beige { background: #cfc7b8; }
