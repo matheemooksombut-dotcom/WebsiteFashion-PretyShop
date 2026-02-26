@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <br>
                 <center> <div class="buyiconstyle"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-paypal"></i><i class="fa-brands fa-cc-amazon-pay"></i></div> </center>
                 <br>
-                <hr>
+                <hr style="color: black;">
                 <br>
               </center>
           `;

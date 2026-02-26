@@ -824,8 +824,8 @@ input[type="range"]::-webkit-slider-thumb {
 .show-item-cart{
     
     padding: 60px;
-    background-color: #000;
-    color: white;
+    background-color: rgba(238, 205, 179, 0.411);
+    color: rgb(0, 0, 0);
     position: relative;
 }
 .buyiconstyle{
